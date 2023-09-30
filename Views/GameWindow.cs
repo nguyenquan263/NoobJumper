@@ -29,15 +29,15 @@ namespace NoobJumper.Views
             this.SizeChanged += DrawingPanel_SizeChanged;
         }
 
-        private void DrawingPanel_SizeChanged(object sender, EventArgs e) 
+        private void DrawingPanel_SizeChanged(object sender, EventArgs e)
         {
             dp.Size = this.ClientSize;
         }
 
         private void ArrowButton_Click(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode) 
-            { 
+            switch (e.KeyCode)
+            {
                 case Keys.Left:
                     dp.MoveBack();
                     return;

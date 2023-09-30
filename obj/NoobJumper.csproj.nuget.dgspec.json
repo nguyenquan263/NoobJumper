@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj": {}
+    "D:\\PersonalStuffs\\NoobJumperGame\\NoobJumper\\NoobJumper.csproj": {}
   },
   "projects": {
-    "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj": {
+    "D:\\PersonalStuffs\\NoobJumperGame\\NoobJumper\\NoobJumper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj",
+        "projectUniqueName": "D:\\PersonalStuffs\\NoobJumperGame\\NoobJumper\\NoobJumper.csproj",
         "projectName": "NoobJumper",
-        "projectPath": "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj",
+        "projectPath": "D:\\PersonalStuffs\\NoobJumperGame\\NoobJumper\\NoobJumper.csproj",
         "packagesPath": "C:\\Users\\quan.nguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\PersonalStuffs\\NoobJumper\\obj\\",
+        "outputPath": "D:\\PersonalStuffs\\NoobJumperGame\\NoobJumper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\quan.nguyen\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
