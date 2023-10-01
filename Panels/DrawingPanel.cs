@@ -49,7 +49,7 @@ namespace NoobJumper.Panels
             b = new SolidBrush(Color.Blue);
             pen = new Pen(Color.Black, 2);
 
-            g.FillRectangle(b, x, y, width, height);
+            g.FillEllipse(b, x, y, width, width);
 
             b.Dispose();
 
@@ -86,23 +86,13 @@ namespace NoobJumper.Panels
         public async void AnimateMovement(Point endPoint)
         {
             isAnimating = true;
-            int startX = playerX;
-            int startY = playerY;
-            int steps = 5; // Adjust the number of steps for smoother animation
 
-            for (int i = 1; i <= steps; i++)
-            {
-                double t = (double)i / steps;
-                int newX = (int)Math.Round(startX + t * (endPoint.X - startX));
-                int newY = (int)Math.Round(startY + t * (endPoint.Y - startY));
+            playerX = endPoint.X - 25;
+            playerY = endPoint.Y - 25;
+            this.Invalidate();
 
-                playerX = newX;
-                playerY = newY;
-                this.Invalidate();
-
-                await Task.Delay(animationSpeed);
-            }
-
+            await Task.Delay(animationSpeed);
+            
             isAnimating = false;
         }
 
@@ -116,15 +106,18 @@ namespace NoobJumper.Panels
             }
         }
 
-        public void Mouse_Click(object sender, MouseEventArgs e)
+        public async void Mouse_Click(object sender, MouseEventArgs e)
         {
             if (!isAnimating && mouseMovingPoints.Count > 0)
             {
                 if (currentPointIndex < mouseMovingPoints.Count)
                 {
-                    Point endPoint = mouseMovingPoints[currentPointIndex];
-                    AnimateMovement(endPoint);
-                    currentPointIndex++;
+                    foreach (var p in mouseMovingPoints)
+                    {
+                        Point endPoint = p;
+                        AnimateMovement(endPoint);
+                        await Task.Delay(animationSpeed * 2);
+                    }
                 }
             }
         }
