@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\personalStuffs\\NoobJumper\\NoobJumper.csproj": {}
+    "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj": {}
   },
   "projects": {
-    "D:\\personalStuffs\\NoobJumper\\NoobJumper.csproj": {
+    "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\personalStuffs\\NoobJumper\\NoobJumper.csproj",
+        "projectUniqueName": "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj",
         "projectName": "NoobJumper",
-        "projectPath": "D:\\personalStuffs\\NoobJumper\\NoobJumper.csproj",
+        "projectPath": "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj",
         "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "D:\\personalStuffs\\NoobJumper\\obj\\",
+        "outputPath": "D:\\PersonalStuffs\\NoobJumper\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,7 +4,6 @@ D:\PersonalStuffs\NoobJumper\bin\Debug\netcoreapp3.1\NoobJumper.runtimeconfig.js
 D:\PersonalStuffs\NoobJumper\bin\Debug\netcoreapp3.1\NoobJumper.runtimeconfig.dev.json
 D:\PersonalStuffs\NoobJumper\bin\Debug\netcoreapp3.1\NoobJumper.dll
 D:\PersonalStuffs\NoobJumper\bin\Debug\netcoreapp3.1\NoobJumper.pdb
-D:\PersonalStuffs\NoobJumper\obj\Debug\netcoreapp3.1\NoobJumper.csproj.AssemblyReference.cache
 D:\PersonalStuffs\NoobJumper\obj\Debug\netcoreapp3.1\NoobJumper.Views.GameWindow.resources
 D:\PersonalStuffs\NoobJumper\obj\Debug\netcoreapp3.1\NoobJumper.csproj.GenerateResource.cache
 D:\PersonalStuffs\NoobJumper\obj\Debug\netcoreapp3.1\NoobJumper.GeneratedMSBuildEditorConfig.editorconfig
