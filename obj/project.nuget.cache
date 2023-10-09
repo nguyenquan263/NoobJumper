@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7P65NiEz7koos+hahQ4l+VuBy1I3e2ZkPo3o+WoL2EXEk07ILVlPkD3+JdyePWlmXy0sLrFcj3sLiBRl+5LZ4Q==",
+  "dgSpecHash": "aastprAsL2UpjxabjuTkpIyjJ7CgPWcincO4QyB/z7Ui0VqnZGZfQMlnpgOTgKW0ZloCeX71CoVI3EedHExOFg==",
   "success": true,
   "projectFilePath": "D:\\PersonalStuffs\\NoobJumper\\NoobJumper.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\quan.nguyen\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }
