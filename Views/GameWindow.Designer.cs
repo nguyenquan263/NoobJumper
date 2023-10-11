@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             SuspendLayout();
-            // 
-            // GameWindow
-            // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(873, 450);
+            ClientSize = new System.Drawing.Size(1600, 900);
             Name = "GameWindow";
             Text = "GameWindow";
             ResumeLayout(false);

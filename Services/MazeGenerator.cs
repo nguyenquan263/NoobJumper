@@ -10,16 +10,16 @@ namespace NoobJumper.Services
     {
         private const int X_DISTANCE = 50;
         private const int Y_DISTANCE = 50;
-        private const int DEPT = 30;
+        private const int DEPT = 200;
 
         private List<Point> mazePoints;
-        private List<Line> mazeLines;
+        private List<LineModel> mazeLines;
 
         private int width;
         private int height;
 
-        private int[] XValTD = { -X_DISTANCE, 0, X_DISTANCE, 0 };
-        private int[] YValTD = { 0, Y_DISTANCE, 0, -Y_DISTANCE };
+        private int[] XValTD = { X_DISTANCE, 0, -X_DISTANCE, 0, -X_DISTANCE, X_DISTANCE, -X_DISTANCE, X_DISTANCE};
+        private int[] YValTD = { 0, -Y_DISTANCE, 0, Y_DISTANCE , -Y_DISTANCE, -Y_DISTANCE, Y_DISTANCE, Y_DISTANCE};
 
         private Dictionary<string, bool> dd = new Dictionary<string, bool>();
 
@@ -30,7 +30,7 @@ namespace NoobJumper.Services
             this.width = w;
             this.height = h;
             this.mazePoints = new List<Point>();
-            this.mazeLines = new List<Line>();
+            this.mazeLines = new List<LineModel>();
         }
 
         public List<Point> GetPoints()
@@ -38,7 +38,7 @@ namespace NoobJumper.Services
             return this.mazePoints;
         }
 
-        public List<Line> GetLines()
+        public List<LineModel> GetLines()
         {
             return this.mazeLines;
         }
@@ -73,7 +73,7 @@ namespace NoobJumper.Services
                 if (!dd.ContainsKey(xTD + ":" + yTD))
                 {
                     this.mazePoints.Add(new Point(xTD, yTD));
-                    this.mazeLines.Add(new Line(new Point(x, y), new Point(xTD, yTD)));
+                    this.mazeLines.Add(new LineModel(new Point(x, y), new Point(xTD, yTD)));
                     dd.Add(xTD + ":" + yTD, true);
                     this.pointGeneration(xTD, yTD, nextDept);
                 }

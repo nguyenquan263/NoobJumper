@@ -22,12 +22,12 @@ namespace NoobJumper.Panels
         private Graphics g;
         private Brush b;
         private Pen pen;
-        private int animationSpeed = 5;
+        private int animationSpeed = 50;
         private int currentPointIndex = 0;
         private bool isAnimating = false;
 
         private List<Point> mazePointsList;
-        private List<Line> mazeLinesList;
+        private List<LineModel> mazeLinesList, testLines;
 
         public DrawingPanel()
         {
@@ -43,6 +43,13 @@ namespace NoobJumper.Panels
             mg.pointGeneration(this.Width / 2, this.Height / 2, 0);
             this.mazePointsList = mg.GetPoints();
             this.mazeLinesList = mg.GetLines();
+
+
+            this.testLines = new List<LineModel>();
+            foreach (var line in mazeLinesList)
+            {
+                this.testLines.Add(line);
+            }
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -74,9 +81,9 @@ namespace NoobJumper.Panels
             //    g.DrawLines(pen, mazePointsList.ToArray());
             //}
 
-            for (int i = 0; i < mazeLinesList.Count; i++)
+            for (int i = 0; i < testLines.Count; i++)
             {
-                g.DrawLine(pen, mazeLinesList[i].startPoint, mazeLinesList[i].endPoint);
+                g.DrawLine(pen, testLines[i].startPoint, testLines[i].endPoint);
             }
 
             b = new SolidBrush(Color.Red);
@@ -129,27 +136,36 @@ namespace NoobJumper.Panels
 
         public void Mouse_Move(object sender, MouseEventArgs e)
         {
-            if (!isAnimating)
-            {
-                Point movingPoint = new Point(e.X, e.Y);
-                mouseMovingPoints.Add(movingPoint);
-                this.Invalidate();
-            }
+            //if (!isAnimating)
+            //{
+            //    Point movingPoint = new Point(e.X, e.Y);
+            //    mouseMovingPoints.Add(movingPoint);
+            //    this.Invalidate();
+            //}
         }
 
         public async void Mouse_Click(object sender, MouseEventArgs e)
         {
             if (!isAnimating && mouseMovingPoints.Count > 0)
             {
-                if (currentPointIndex < mouseMovingPoints.Count)
-                {
-                    foreach (var p in mouseMovingPoints.ToArray())
-                    {
-                        Point endPoint = p;
-                        AnimateMovement(endPoint);
-                        await Task.Delay(animationSpeed * 2);
-                    }
-                }
+                //if (currentPointIndex < mouseMovingPoints.Count)
+                //{
+                //    foreach (var p in mouseMovingPoints.ToArray())
+                //    {
+                //        Point endPoint = p;
+                //        AnimateMovement(endPoint);
+                //        await Task.Delay(animationSpeed * 2);
+                //    }
+                //}
+
+                
+            }
+
+            foreach (var p in mazePointsList.ToArray())
+            {
+                Point endPoint = p;
+                AnimateMovement(endPoint);
+                await Task.Delay(animationSpeed * 2);
             }
         }
     }

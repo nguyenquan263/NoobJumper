@@ -18,8 +18,8 @@ namespace NoobJumper.Views
             InitializeComponent();
             this.KeyPreview = true;
 
-            this.Width = 800;
-            this.Height = 600;
+            this.Width = 1600;
+            this.Height = 900;
 
             dp = new DrawingPanel();
             dp.Parent = this;
